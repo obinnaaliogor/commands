@@ -11,3 +11,4 @@ Get-Service ssh-agent
 ssh-add C:\Users\Admin\my-ec2key.pem
 
 # SSH into the instance (bastion host) in the public subnet. Remember to allow agent forwarding
+ssh -i <key_pier.pem> ec2-user@<public-ip> -L 3306:<rds-endpoint>:3306 -N
